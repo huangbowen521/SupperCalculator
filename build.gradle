@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+
+    compile 'org.springframework:spring-webmvc:4.1.6.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-web:1.2.4.RELEASE'
+
+    testCompile 'junit:junit:4.12'
+
+}
+
+
+
+
+
+task wrapper(type: Wrapper) {
+	gradleVersion = '2.4'
+}

@@ -1,0 +1,7 @@
+.DS_Store
+.gradle/
+SupperCalculator.iml
+SupperCalculator.ipr
+SupperCalculator.iws
+build/
+target/
