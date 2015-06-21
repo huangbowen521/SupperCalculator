@@ -3,17 +3,18 @@
 
 <html>
 <head>
-<title>≥¨º∂º∆À„∆˜</title>
+<meta charset="UTF-8">
+<title>Supper Calculator</title>
 </head>
 
 <body>
 
-<form:form id="calculator" modelAttribute="calculator">
-  <form:input path="first" />
-  <form:input path="second" />
+<form:form method="POST" action="calculate" modelAttribute="calculator">
+  <form:input path="firstNumber" /> +
+  <form:input path="secondNumber" />
+  <button type="submit">calculate</button>
 
-  <p th:text="${result}">
-  <button type="submit">º∆À„</button>
+  <p>This is the result: <div id="result">${result}</div></p>
 
 
 </form:form>

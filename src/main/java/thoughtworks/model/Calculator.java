@@ -1,5 +1,6 @@
 package thoughtworks.model;
 
+
 public class Calculator {
 
     private int firstNumber = 0;
