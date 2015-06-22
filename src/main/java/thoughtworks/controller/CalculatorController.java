@@ -1,3 +1,9 @@
+/*
+ * Copyright 2008 Inc.
+ *
+ * (details of open-source license...)
+ */
+
 package thoughtworks.controller;
 
 import org.springframework.stereotype.Controller;
@@ -17,7 +23,7 @@ public class CalculatorController {
         model.addAttribute("firstNumber", calculator.getFirstNumber());
         model.addAttribute("secondNumber", calculator.getSecondNumber());
         model.addAttribute("result", calculator.calculate());
-        model.addAttribute("calculator",calculator);
+        model.addAttribute("calculator", calculator);
         return "index";
     }
 

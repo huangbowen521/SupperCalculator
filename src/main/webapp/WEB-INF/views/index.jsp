@@ -16,9 +16,7 @@
 
   <p>This is the result: <div id="result">${result}</div></p>
 
-
 </form:form>
-
 
 </body>
 </html>

@@ -1,4 +1,11 @@
+/*
+ * Copyright 2008 Inc.
+ *
+ * (details of open-source license...)
+ */
+
 package thoughtworks.model;
+
 
 import org.junit.Test;
 
@@ -13,6 +20,6 @@ public class CalculatorTest {
         calculator.setFirstNumber(1);
         calculator.setSecondNumber(2);
         int result = calculator.calculate();
-        assertThat(result,is(3));
+        assertThat(result, is(3));
     }
 }

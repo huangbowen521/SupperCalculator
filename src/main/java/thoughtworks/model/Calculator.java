@@ -1,3 +1,10 @@
+/*
+ * Copyright 2008 Inc.
+ *
+ * (details of open-source license...)
+ */
+
+
 package thoughtworks.model;
 
 
