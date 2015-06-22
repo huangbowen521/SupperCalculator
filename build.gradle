@@ -2,12 +2,17 @@ buildscript {
     repositories {
         mavenCentral ()
     }
+
+    dependencies {
+        classpath 'mysql:mysql-connector-java:5.1.16'
+    }
 }
 
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'jetty'
 apply plugin: 'checkstyle'
+apply plugin: 'sonar-runner'
 
 repositories {
     mavenCentral ()
@@ -30,4 +35,14 @@ jettyRun {
 
 task wrapper (type: Wrapper) {
     gradleVersion = '2.4'
+}
+
+sonarRunner {
+    sonarProperties {
+        property "sonar.host.url", "http://localhost:9000"
+        property "sonar.jdbc.url", "jdbc:mysql://localhost:3306/sonar?useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useConfigs=maxPerformance"
+        property "sonar.jdbc.driverClassName", "com.mysql.jdbc.Driver"
+        property "sonar.jdbc.username", "sonar"
+        property "sonar.jdbc.password", "sonar"
+    }
 }
