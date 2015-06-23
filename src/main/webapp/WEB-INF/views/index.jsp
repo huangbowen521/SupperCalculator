@@ -9,6 +9,8 @@
 
 <body>
 
+<h1>Supper Calculator</h1>
+
 <form:form method="POST" action="calculate" modelAttribute="calculator">
   <form:input path="firstNumber" /> +
   <form:input path="secondNumber" />
