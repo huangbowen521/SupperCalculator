@@ -8,6 +8,10 @@ buildscript {
     }
 }
 
+plugins {
+    id 'net.saliman.cobertura' version '2.2.8'
+}
+
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'jetty'
@@ -24,8 +28,15 @@ repositories {
 
 dependencies {
     compile 'org.springframework:spring-webmvc:3.1.1.RELEASE'
+    testCompile 'org.slf4j:slf4j-api:1.7.12'
 
     testCompile 'junit:junit:4.12'
+}
+
+cobertura {
+    coverageCheckPackageBranchRate = 30
+    coverageCheckPackageLineRate = 30
+    coverageCheckHaltOnFailure = true
 }
 
 jettyRun {
